@@ -1,2 +1,6 @@
-# lung-cancer-prediction
-ML-based model with 99.67% accuracy. Predicts lung cancer risk using age, gender, lifestyle, and medical history. Flask web app included.
+Term Project - Artificial Intelligence (6A)
+
+- Hassan Mahmood (20L-1052)
+- Hafiz Uzair Warsi (20L-2113)
+- Muhammad Ibrahim (20L-1229)
+- Muneeb Sultan (20L-1199)

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Health Assessment Form</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 30px;
+			color: #333333;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+			color: #333333;
+		}
+
+		input[type="number"], select {
+			padding: 8px;
+			border-radius: 5px;
+			border: 1px solid #cccccc;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			padding: 12px 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+	<link rel="icon" type="image/x-icon" href="https://img.icons8.com/color-glass/48/lungs.png">
+</head>
+<body>
+	<div class="container">
+		<h1>Health Assessment Form</h1>
+		<form method="POST" action="{{ url_for('results') }}">
+
+			<!-- Add a label for the form title -->
+			<label for="form_title" class="sr-only">Health Assessment Form</label>
+			<input type="hidden" name="form_title" id="form_title" value="Health Assessment Form">
+
+			<label for="age">Age:</label>
+			<input type="number" name="age" id="age" min="0" max="100" required value="30">
+
+			<label for="gender">Gender:</label>
+			<select name="gender" id="gender" required>
+				<option value="" disabled>Select gender</option>
+				<option value="male" selected>Male</option>
+				<option value="female">Female</option>
+			</select>
+
+			<p>On a scale from 1 (lowest) to 9 (highest), update the following:</p>
+
+			<label for="air_pollution">Air Pollution:</label>
+			<input type="number" name="air_pollution" id="air_pollution" min="1" max="9" required value="1">
+
+			<label for="alcohol_use">Alcohol use:</label>
+			<input type="number" name="alcohol_use" id="alcohol_use" min="1" max="9" required value="1">
+
+			<label for="dust_allergy">Dust Allergy:</label>
+			<input type="number" name="dust_allergy" id="dust_allergy" min="1" max="9" required value="1">
+
+			<label for="occupational_hazards">Occupational Hazards:</label>
+			<input type="number" name="occupational_hazards" id="occupational_hazards" min="1" max="9" required value="1">
+
+			<label for="genetic_risk">Genetic Risk:</label>
+			<input type="number" name="genetic_risk" id="genetic_risk" min="1" max="9" required value="1">
+
+			<label for="chronic_lung_disease">Chronic Lung Disease:</label>
+			<input type="number" name="chronic_lung_disease" id="chronic_lung_disease" min="1" max="9" required value="1">
+
+			<label for="balanced_diet">Balanced Diet:</label>
+			<input type="number" name="balanced_diet" id="balanced_diet" min="1" max="9" required value="1">
+
+			<label for="obesity">Obesity:</label>
+			<input type="number" name="obesity" id="obesity" min="1" max="9" required value="1">
+
+			<label for="smoking">Smoking:</label>
+			<input type="number" name="smoking" id="smoking" min="1" max="9" required value="1">
+
+			<label for="passive_smoker">Passive Smoker:</label>
+			<input type="number" name="passive_smoker" id="passive_smoker" min="1" max="9" required value="1">
+
+			<label for="chest_pain">Chest Pain:</label>
+			<input type="number" name="chest_pain" id="chest_pain" min="1" max="9" required value="1">
+
+			<label for="coughing_blood">Coughing of Blood:</label>
+			<input type="number" name="coughing_blood" id="coughing_blood" min="1" max="9" required value="1">
+
+			<label for="fatigue">Fatigue:</label>
+			<input type="number" name="fatigue" id="fatigue" min="1" max="9" required value="1">
+
+			<label for="weight_loss">Weight Loss:</label>
+			<input type="number" name="weight_loss" id="weight_loss" min="1" max="9" required value="1">
+
+			<label for="shortness_of_breath">Shortness of Breath:</label>
+			<input type="number" name="shortness_of_breath" id="shortness_of_breath" min="1" max="9" required value="1">
+
+			<label for="wheezing">Wheezing:</label>
+			<input type="number" name="wheezing" id="wheezing" min="1" max="9" required value="1">
+
+			<label for="swallowing_difficulty">Swallowing Difficulty:</label>
+			<input type="number" name="swallowing_difficulty" id="swallowing_difficulty" min="1" max="9" required value="1">
+
+			<label for="clubbing">Clubbing of Finger Nails:</label>
+			<input type="number" name="clubbing" id="clubbing" min="1" max="9" required value="1">
+
+			<label for="frequent_cold">Frequent Cold:</label>
+			<input type="number" name="frequent_cold" id="frequent_cold" min="1" max="9" required value="1">
+
+			<label for="dry_cough">Dry Cough:</label>
+			<input type="number" name="dry_cough" id="dry_cough" min="1" max="9" required value="1">
+
+			<label for="snoring">Snoring:</label>
+			<input type="number" name="snoring" id="snoring" min="1" max="9" required value="1">
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</body>
+</html>
